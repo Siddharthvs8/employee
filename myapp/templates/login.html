@@ -1,0 +1,35 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<div class="sidenav"  style="background-image: url('https://i.stack.imgur.com/fhEwl.png');" >
+         <div class="login-main-text">
+          <h2 style="color: #e78f1a;">SCHOOL<br> Login Page</h2>
+            <p>Login or register from here to access.</p>
+         </div>
+      </div>
+
+      <div class="main"  style="background-image: url('https://i.stack.imgur.com/fhEwl.png');">
+        <div class="col-md-6 col-sm-12" >
+           <div class="login-form">
+
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+  <div style="padding: 15px;margin-left: -13px;">  <button class="btn btn-black" type="submit" id="button">Login</button>
+&nbsp;&nbsp;
+ <a href="/school/register" class="btn btn-secondary">Register</a>
+ </div>
+ </form>
+</div>
+</div>
+</div>
+
+{% endblock content %}

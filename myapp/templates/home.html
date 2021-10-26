@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{%block content%}
+  <a href="/school/logout" class="btn btn-primary " style="text-decoration: none;margin-left: 90%;">Logout</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Employee_name</th>
+        <th scope="col">Employee_age</th>
+        <th scope="col">Employee_contact</th>
+        <th scope="col">Employee_email</th>
+          <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in e %}
+      <tr>
+
+        <td>{{i.employee_name}}</td>
+        <td>{{i.employee_age}}</td>
+        <td>{{i.employee_contact}}</td>
+        <<td>{{i.employee_email}}</td>
+        <td>
+          <a href="/school/update/{{i.id}}" class="btn btn-primary" style="text-decoration: none;">Edit</a>
+          <a href="/school/delete/{{i.id}}" class="btn btn-primary" style="text-decoration: none;">Delete</a></td>
+
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+  <p align="center"><a href="/school/add" class="btn btn-primary ">Add New Record</a></p>
+
+  {%endblock content%}

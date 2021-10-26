@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+{%block content%}
+<form method="POST">
+  {%csrf_token%}
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label" name="employee_name">employee_name</label>
+  {{employee.employee_name}}
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label" name="employee_age">employee_age</label>
+  {{employee.employee_age}}
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label" name="employee_email">employee_email</label>
+  {{employee.employee_email}}
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label" name="employee_contact">employee_contact</label>
+  {{employee.employee_contact}}
+</div>
+ <button type="submit" class="btn btn-warning">Update</button>
+ </form>
+{%endblock content%}

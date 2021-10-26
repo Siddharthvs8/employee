@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{%block content%}
+<form method="POST" action="/school/add_all/">
+  {%csrf_token%}
+  <table
+    style="margin-left: 10%";
+>
+    <tr>
+<td>
+    <label for="employee_name" class="form-label"> Employee name</label>
+    </td>
+    <td style="
+    padding: 25px;
+">
+    <input type="text" class="form-control" id="employee_name"  name="employee_name"  >
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <label for="employee_age" class="form-label">  Employee age</label>
+  </td>
+  <td style="
+    padding: 25px;
+">
+  <input type="text" class="form-control" id="employee_age" name="employee_age" >
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <label for="employee_contact" class="form-label"> Employee contact</label>
+  </td>
+  <td style="
+    padding: 25px;
+">
+  <input type="text" class="form-control" id="employee_contact" name="employee_contact"  >
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <label for="employee_email" class="form-label"> Employee email</label>
+  </td>
+  <td style="
+    padding: 25px;
+">
+  <input type="text" class="form-control" id="employee_email" name="employee_email">
+  </td>
+  </tr>
+
+
+
+
+  </table>
+  <button type="submit"  style="margin-left: 15%"; class="btn btn-primary">Submit</button>
+</form>
+{%endblock content%}
